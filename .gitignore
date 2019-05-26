@@ -1,0 +1,5 @@
+directline-jabber-task/node_modules/
+directline-jabber-task/**/*.js
+*.log
+*.vsix
+node_modules
