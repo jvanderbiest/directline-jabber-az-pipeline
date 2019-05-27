@@ -7,9 +7,9 @@
     "category": "Utility",
     "author": "Jonas Van der Biest",
     "version": {
-        "Major": 0,
-        "Minor": 1,
-        "Patch": 0
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 10
     },
     "instanceNameFormat": "Directline Jabber",
     "inputs": [{
@@ -25,7 +25,7 @@
             }
         },
         {
-            "name": "directlinesecret",
+            "name": "directlineSecretValue",
             "type": "string",
             "label": "Directline secret",
             "required": true,
@@ -33,7 +33,7 @@
             "visibleRule": "authentication == directlineSecret"
         },
         {
-            "name": "token",
+            "name": "tokenValue",
             "type": "string",
             "label": "Endpoint Token",
             "required": true,

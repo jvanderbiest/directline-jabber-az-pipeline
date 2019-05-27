@@ -1,0 +1,30 @@
+{
+  "name": "directline-jabber-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "cross-env TASK_TEST_TRACE=1 npm run build && mocha tests/_suite.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jvanderbiest/directline-jabber-az-pipeline.git"
+  },
+  "author": "Jonas Van der Biest",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jvanderbiest/directline-jabber-az-pipeline/issues"
+  },
+  "homepage": "https://github.com/jvanderbiest/directline-jabber-az-pipeline#readme",
+  "dependencies": {
+    "azure-pipelines-task-lib": "^2.8.0",
+    "directline-jabber": "^1.0.1",
+    "@types/node": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/mocha": "^5.2.6",
+    "@types/q": "^1.5.2",
+    "cross-env": "^5.2.0"
+  }
+}

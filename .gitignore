@@ -3,3 +3,5 @@ directline-jabber-task/**/*.js
 *.log
 *.vsix
 node_modules
+*.zip
+*.tar.gz

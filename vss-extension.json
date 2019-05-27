@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "directline-jabber-task",
     "name": "Directline Jabber",
-    "version": "0.0.1",
+    "version": "1.0.10",
     "publisher": "jvanderbiest",
     "targets": [
         {

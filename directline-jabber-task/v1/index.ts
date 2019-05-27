@@ -9,12 +9,18 @@ async function run() {
 
         let authenticationSelection: string = tl.getInput('authentication');
 
+        tl.debug("authenticationSelection === " + authenticationSelection);
+
         if (authenticationSelection === 'directlineSecret') {
-            authValue = tl.getInput('directlinesecret');
+            tl.debug("using directlineSecret");
+
+            authValue = tl.getInput('directlineSecretValue');
             useDirectlineSecret = true;
         }
         else if (authenticationSelection === 'token') {
-            authValue = tl.getInput('token');
+            tl.debug("using token");
+
+            authValue = tl.getInput('tokenValue');
             useTokenEndpoint = true;
         }
         else {
@@ -33,13 +39,17 @@ async function run() {
             requestHandler = new RequestHandler('', authValue);
         }
         
-        var processor = new Processor(new ActivityHandler(requestHandler), new TranscriptGenerator());
-        processor.start(null, folderPath, includeSubfolders);
+        // var folderPaths = new Array<string>();
+        // folderPaths.push(folderPath);
 
-        console.log('Finished directline-jabber-task');
+        // var processor = new Processor(new ActivityHandler(requestHandler), new TranscriptGenerator());
+        // await processor.start(null, folderPaths, includeSubfolders);
+
+        tl.setResult(tl.TaskResult.Succeeded, 'Finished directline-jabber-task');
+        // console.log('Finished directline-jabber-task');
     }
     catch (err) {
-        tl.debug('xcodeMajorVersion = ' + err);
+        tl.debug('error: ' + err);
         tl.setResult(tl.TaskResult.Failed, err.message);
     }
 }
