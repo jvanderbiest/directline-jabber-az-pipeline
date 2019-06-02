@@ -9,7 +9,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 18
+        "Patch": 0
     },
     "instanceNameFormat": "Directline Jabber",
     "inputs": [{
@@ -46,7 +46,7 @@
             "label": "Folder path",
             "defaultValue": "",
             "required": true,
-            "helpMarkDown": "Specify a directory with your chatdown or transcript files."
+            "helpMarkDown": "Specify a directory with your transcript files."
         },
         {
             "name": "includeSubfolders",
@@ -54,7 +54,7 @@
             "label": "Include sub folders",
             "defaultValue": true,
             "required": true,
-            "helpMarkDown": "Indicate whether sub folders will be included when looking for chatdown or transcript files."
+            "helpMarkDown": "Indicate whether sub folders will be included when looking for transcript files."
         }
     ],
     "execution": {

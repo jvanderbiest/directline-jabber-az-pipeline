@@ -10,11 +10,11 @@ async function run() {
         let authenticationSelection: string = tl.getInput('authentication');
 
         if (authenticationSelection === 'directlineSecret') {
-            authValue = tl.getInput('directlinesecret');
+            authValue = tl.getInput('directlineSecretValue');
             useDirectlineSecret = true;
         }
         else if (authenticationSelection === 'token') {
-            authValue = tl.getInput('token');
+            authValue = tl.getInput('tokenValue');
             useTokenEndpoint = true;
         }
         else {
@@ -22,7 +22,7 @@ async function run() {
             return;            
         }
 
-        const folderPath: string = tl.getInput('folderPath');
+        const folderPath: string = tl.getPathInput('folderPath');
         const includeSubfolders: boolean = tl.getBoolInput('includeSubfolders', true);
 
         var requestHandler;
@@ -37,12 +37,11 @@ async function run() {
         folderPaths.push(folderPath);
 
         var processor = new Processor(new ActivityHandler(requestHandler), new TranscriptGenerator());
-        await processor.start(null, folderPaths, includeSubfolders);
+        await processor.start(null, folderPaths, includeSubfolders, true);
 
         console.log('Finished directline-jabber-task');
     }
     catch (err) {
-        tl.debug('error: ' + err);
         tl.setResult(tl.TaskResult.Failed, err.message);
     }
 }
