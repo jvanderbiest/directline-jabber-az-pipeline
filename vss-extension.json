@@ -1,8 +1,9 @@
 {
     "manifestVersion": 1,
+    "public": true,
     "id": "directline-jabber-task",
     "name": "Directline Jabber",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "jvanderbiest",
     "targets": [
         {
@@ -19,6 +20,16 @@
     "files": [
         {
             "path": "directline-jabber-task"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "screenshots": [
+        {
+            "path": "screenshots/screen1.jpg"
         }
     ],
     "contributions": [
