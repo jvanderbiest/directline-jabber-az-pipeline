@@ -6,4 +6,4 @@ Created using https://docs.microsoft.com/en-us/azure/devops/extend/develop/add-b
 After restoring node modules, there has been a slight manual modification on directline-jabber npm package because the tasks does not work with the chatdown npm package.
 The chatdown reference has been removed from the directline-jabber package in the out folder (transcriptGenerator.js) to make it work.
 
-[[screenshots/screen1.jpg|alt=DirectlineJabberPipeline]]
+![DirectlineJabberPipeline](./screenshots/screen1.jpg)
