@@ -19,7 +19,7 @@
   "homepage": "https://github.com/jvanderbiest/directline-jabber-az-pipeline#readme",
   "dependencies": {
     "azure-pipelines-task-lib": "^2.8.0",
-    "directline-jabber": "^1.0.2"
+    "directline-jabber": "^1.0.3"
   },
   "devDependencies": {
     "@types/mocha": "^5.2.7",

@@ -6,7 +6,7 @@ let taskPath = path.join(__dirname, '..', 'index.js');
 let tmr: tmrm.TaskMockRunner = new tmrm.TaskMockRunner(taskPath);
 
 tmr.setInput('authentication', 'token');
-tmr.setInput('token', 'https://settokenurl');
+tmr.setInput('tokenValue', 'https://settokenurl');
 tmr.setInput('folderPath', 'c:\\chat-tests');
 tmr.setInput('includeSubFolders', 'true');
 
