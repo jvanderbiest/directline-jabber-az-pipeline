@@ -7,9 +7,9 @@
     "category": "Utility",
     "author": "Jonas Van der Biest",
     "version": {
-        "Major": 1,
+        "Major": 2,
         "Minor": 0,
-        "Patch": 1
+        "Patch": 0
     },
     "instanceNameFormat": "Directline Jabber",
     "inputs": [{
@@ -55,6 +55,30 @@
             "defaultValue": true,
             "required": true,
             "helpMarkDown": "Indicate whether sub folders will be included when looking for transcript files."
+        },
+        {
+            "name": "preprocessFilePath",
+            "type": "filePath",
+            "label": "Preprocess file path",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "A file that contains activities to process before the actual conversation"
+        },
+        {
+            "name": "userId",
+            "type": "string",
+            "label": "Replace conversation user id",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Replaces the user id with the specified one in a conversation."
+        },
+        {
+            "name": "userIdPrefix",
+            "type": "string",
+            "label": "Use a prefix for the user id",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "Prefixes the user id with the specified one in a conversation."
         }
     ],
     "execution": {

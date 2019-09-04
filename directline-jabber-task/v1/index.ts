@@ -24,6 +24,10 @@ async function run() {
 
         const folderPath: string = tl.getPathInput('folderPath');
         const includeSubfolders: boolean = tl.getBoolInput('includeSubfolders', true);
+        
+        const userId: string = tl.getInput('userId');
+        const userIdPrefix: string = tl.getInput('userIdPrefix');
+        const preprocessFilePath: string = tl.getPathInput('preprocessFilePath');
 
         var requestHandler;
         if (useDirectlineSecret) {
@@ -36,8 +40,8 @@ async function run() {
         var folderPaths = new Array<string>();
         folderPaths.push(folderPath);
 
-        var processor = new Processor(new ActivityHandler(requestHandler), new TranscriptGenerator());
-        await processor.start(null, folderPaths, includeSubfolders, true);
+        var processor = new Processor(new ActivityHandler(requestHandler), new TranscriptGenerator(userId, userIdPrefix));
+        await processor.start(null, folderPaths, includeSubfolders, preprocessFilePath);
 
         console.log('Finished directline-jabber-task');
     }
