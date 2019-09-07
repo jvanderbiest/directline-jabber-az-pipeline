@@ -2,14 +2,14 @@
     "id": "3b9727ae-fe2b-47b7-bdb3-d429d86b27e1",
     "name": "directline-jabber",
     "friendlyName": "Directline Jabber",
-    "description": "Executes Directline Jabber commandline tool",
-    "helpMarkDown": "",
+    "description": "Uses the Directline Jabber testing tool in your Azure DevOps pipelines.",
+    "helpMarkDown": "https://github.com/jvanderbiest/directline-jabber",
     "category": "Utility",
     "author": "Jonas Van der Biest",
     "version": {
         "Major": 2,
         "Minor": 0,
-        "Patch": 0
+        "Patch": 3
     },
     "instanceNameFormat": "Directline Jabber",
     "inputs": [{

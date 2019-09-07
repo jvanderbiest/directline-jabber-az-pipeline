@@ -30,10 +30,10 @@ async function run() {
 
         // if the preprocessFilePath was empty by the user Azure DevOps will put the default WorkingDirectory path instead when checking for PathInput.
         // we want to have the empty value if it's empty.
-        var preprocessFilePath: string = tl.getInput('preprocessFilePath');
+        var preprocessFilePath: string = tl.getPathInput('preprocessFilePath');
 
-        if (preprocessFilePath) {
-            preprocessFilePath = tl.getPathInput('preprocessFilePath');
+        if (preprocessFilePath == tl.getVariable('System.DefaultWorkingDirectory')) {
+            preprocessFilePath = null;
         }
 
         var requestHandler;

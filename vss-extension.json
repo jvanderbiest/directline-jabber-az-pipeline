@@ -3,14 +3,14 @@
     "public": true,
     "id": "directline-jabber-task",
     "name": "Directline Jabber",
-    "version": "2.0.1",
+    "version": "2.0.3",
     "publisher": "jvanderbiest",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
         }
     ],    
-    "description": "Use of Directline Jabber testing tool.",
+    "description": "Uses the Directline Jabber testing tool in your Azure DevOps pipelines.",
     "categories": [
         "Azure Pipelines"
     ],
