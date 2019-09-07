@@ -9,6 +9,6 @@ tmr.setInput('authentication', 'token');
 tmr.setInput('tokenValue', 'https://');
 tmr.setInput('folderPath', 'c:\\temp\\directline-jabber');
 tmr.setInput('includeSubFolders', 'true');
-tmr.setInput('preprocessFilePath', 'C:\\temp\\directline-jabber-pre\\event.transcript')
+tmr.setInput('preprocessFilePath', '')
 
 tmr.run();

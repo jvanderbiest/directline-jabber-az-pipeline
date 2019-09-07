@@ -3,7 +3,7 @@
     "public": true,
     "id": "directline-jabber-task",
     "name": "Directline Jabber",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "publisher": "jvanderbiest",
     "targets": [
         {
