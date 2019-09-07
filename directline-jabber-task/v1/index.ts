@@ -19,15 +19,22 @@ async function run() {
         }
         else {
             tl.setResult(tl.TaskResult.Failed, 'Authentication was not set.');
-            return;            
+            return;
         }
 
         const folderPath: string = tl.getPathInput('folderPath');
         const includeSubfolders: boolean = tl.getBoolInput('includeSubfolders', true);
-        
+
         const userId: string = tl.getInput('userId');
         const userIdPrefix: string = tl.getInput('userIdPrefix');
-        const preprocessFilePath: string = tl.getPathInput('preprocessFilePath');
+
+        // if the preprocessFilePath was empty by the user Azure DevOps will put the default WorkingDirectory path instead when checking for PathInput.
+        // we want to have the empty value if it's empty.
+        var preprocessFilePath: string = tl.getInput('preprocessFilePath');
+
+        if (preprocessFilePath) {
+            preprocessFilePath = tl.getPathInput('preprocessFilePath');
+        }
 
         var requestHandler;
         if (useDirectlineSecret) {
@@ -36,7 +43,7 @@ async function run() {
         else if (useTokenEndpoint) {
             requestHandler = new RequestHandler('', authValue);
         }
-        
+
         var folderPaths = new Array<string>();
         folderPaths.push(folderPath);
 
